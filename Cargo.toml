@@ -2,7 +2,9 @@
 name = "multitarget-issue"
 version = "0.1.0"
 edition = "2018"
-
+# Must use resolver v2 to avoid a std/no-std clash when building for different targets
+# https://doc.rust-lang.org/cargo/reference/features.html#feature-resolver-version-2
+resolver = "2"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [target.thumbv7em-none-eabihf.dependencies]

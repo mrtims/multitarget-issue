@@ -1,3 +1,10 @@
+Fix
+======
+Use resolver = "2" to avoid a std/no-std clash when building for different targets
+# https://doc.rust-lang.org/cargo/reference/features.html#feature-resolver-version-2
+
+Original Issue
+======
 arm.rs is destined for thumbv7em-none-eabihf, while win.rs is for x86_64-pc-windows-msvc.
 ```bash
 cargo build --bin arm --target thumbv7em-none-eabihf
